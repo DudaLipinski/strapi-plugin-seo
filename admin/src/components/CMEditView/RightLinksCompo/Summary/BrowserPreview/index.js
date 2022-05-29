@@ -43,7 +43,7 @@ const BrowserPreview = ({ modifiedData, setIsVisible }) => {
     >
       <ModalHeader>
         <Typography fontWeight="bold" textColor="neutral800" as="h2" id="title">
-          SEO Plugin
+          SEO Analysis
         </Typography>
       </ModalHeader>
       <ModalBody>
