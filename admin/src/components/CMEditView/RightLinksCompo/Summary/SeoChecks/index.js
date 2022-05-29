@@ -83,25 +83,8 @@ const SeoChecks = ({
               metaDescription={_.get(modifiedData, 'seo.metaDescription', null)}
               checks={checks}
             />
-            <WordCountCheck wordCount={wordCount} checks={checks} />
-            <KeywordDensityCheck
-              keywordsDensity={keywordsDensity}
-              checks={checks}
-            />
             <MetaSocialCheck
               metaSocial={_.get(modifiedData, 'seo.metaSocial', null)}
-              checks={checks}
-            />
-            <CanonicalUrlCheck
-              canonicalUrl={_.get(modifiedData, 'seo.canonicalURL', null)}
-              checks={checks}
-            />
-            <StructuredDataCheck
-              structuredData={_.get(modifiedData, 'seo.structuredData', null)}
-              checks={checks}
-            />
-            <MetaRobotCheck
-              metaRobots={_.get(modifiedData, 'seo.metaRobots', null)}
               checks={checks}
             />
             <AlternativeTextCheck
@@ -110,8 +93,8 @@ const SeoChecks = ({
               altTexts={_.get(emptyAltCount, 'altTexts', null)}
               checks={checks}
             />
-            <LastUpdatedAtCheck
-              updatedAt={_.get(modifiedData, 'updatedAt', null)}
+            <KeywordDensityCheck
+              keywordsDensity={keywordsDensity}
               checks={checks}
             />
           </Box>

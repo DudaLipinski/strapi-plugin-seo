@@ -248,13 +248,8 @@ const getAllChecks = (modifiedData, components, contentType) => {
   );
 
   let result = {
-    wordCount: getWordCountPreview(wordCount),
-    metaRobots: metaRobotPreview(modifiedData),
     metaSocial: metaSocialPreview(modifiedData),
-    canonicalUrl: canonicalUrlPreview(modifiedData),
     metaTitle: getMetaTitleCheckPreview(modifiedData),
-    lastUpdatedAt: lastUpdatedAtPreview(modifiedData),
-    structuredData: structuredDataPreview(modifiedData),
     metaDescription: getMetaDescriptionPreview(modifiedData),
     alternativeText: getAlternativeTextPreview(emptyAltCount),
     keywordsDensity: getKeywordDensityPreview(keywordsDensity),
