@@ -32,9 +32,6 @@ const SocialPreview = ({ modifiedData, setIsVisible }) => {
   const metaSocial = _.get(seo, 'metaSocial', []);
   const keywords = _.get(seo, 'keywords', null);
 
-  console.log("--- seo.metaImage ---") // [XXX] REMOVE BEFORE COMMITING
-  console.log(seo.metaImage) // [XXX] REMOVE BEFORE COMMITING
-
   return (
     <ModalLayout
       onClose={() => setIsVisible((prev) => !prev)}

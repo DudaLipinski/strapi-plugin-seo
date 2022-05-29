@@ -12,23 +12,25 @@ import MetaChecks from '../../BrowserPreview/MetaChecks';
 import KeywordCheck from '../../BrowserPreview/KeywordCheck';
 
 const TabContent = ({ fallbackImage, item, keywords }) => {
+  const itemImage = item.image || fallbackImage
+
   return (
     <TabPanel>
       <Stack size={2}>
         <Box paddingTop={6} paddingBottom={6}>
-          {item.image && (
+          {itemImage && (
             <Flex alignItems="center" justifyContent="center">
               {item.socialNetwork === 'Facebook' ? (
                 <FacebookPreview
                   title={item.title}
                   description={item.description}
-                  image={item.image || fallbackImage}
+                  image={itemImage || fallbackImage}
                 />
               ) : (
                 <TwitterPreview
                   title={item.title}
                   description={item.description}
-                  image={item.image || fallbackImage}
+                  image={itemImage || fallbackImage}
                 />
               )}
             </Flex>
