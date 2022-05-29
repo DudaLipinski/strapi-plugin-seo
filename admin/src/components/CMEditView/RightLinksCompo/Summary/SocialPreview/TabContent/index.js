@@ -11,7 +11,7 @@ import TwitterPreview from '../TwitterPreview';
 import MetaChecks from '../../BrowserPreview/MetaChecks';
 import KeywordCheck from '../../BrowserPreview/KeywordCheck';
 
-const TabContent = ({ item, keywords }) => {
+const TabContent = ({ fallbackImage, item, keywords }) => {
   return (
     <TabPanel>
       <Stack size={2}>
@@ -22,13 +22,13 @@ const TabContent = ({ item, keywords }) => {
                 <FacebookPreview
                   title={item.title}
                   description={item.description}
-                  image={item.image}
+                  image={item.image || fallbackImage}
                 />
               ) : (
                 <TwitterPreview
                   title={item.title}
                   description={item.description}
-                  image={item.image}
+                  image={item.image || fallbackImage}
                 />
               )}
             </Flex>

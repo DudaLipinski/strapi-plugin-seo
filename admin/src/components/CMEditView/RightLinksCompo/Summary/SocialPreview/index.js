@@ -39,7 +39,7 @@ const SocialPreview = ({ modifiedData, setIsVisible }) => {
     >
       <ModalHeader>
         <Typography fontWeight="bold" textColor="neutral800" as="h2" id="title">
-          SEO Plugin
+          SEO
         </Typography>
       </ModalHeader>
       <ModalBody>
@@ -76,11 +76,12 @@ const SocialPreview = ({ modifiedData, setIsVisible }) => {
                       item.socialNetwork &&
                       item.title &&
                       item.description &&
-                      item.image
+                      seo.metaImage || item.image
                     )
                       return (
                         <TabContent
                           key={index}
+                          fallbackImage={seo.metaImage}
                           item={item}
                           keywords={keywords}
                         />
